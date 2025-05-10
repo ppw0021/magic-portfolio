@@ -5,6 +5,7 @@ import {
   Flex,
   Heading,
   Icon,
+  RevealFx,
   IconButton,
   SmartImage,
   Tag,
@@ -52,6 +53,7 @@ export default function About() {
   ];
   return (
     <Column maxWidth="m">
+      <RevealFx translateY="8" delay={0} fillWidth horizontal="start" paddingBottom="32">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -318,6 +320,7 @@ export default function About() {
           )}
         </Column>
       </Flex>
+      </RevealFx>
     </Column>
   );
 }

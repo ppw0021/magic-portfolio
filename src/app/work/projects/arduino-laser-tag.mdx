@@ -1,0 +1,31 @@
+---
+title: "Arduino-powered laser tag"
+publishedAt: "2018-03-18"
+summary: "Fun and interactive laser tag game"
+images:
+  - "/images/projects/abb-dt/main.png"
+link: "https://github.com/ppw0021/arduino_lasertag"
+---
+
+## Video demonstration
+[Watch the demo video](https://youtu.be/1hx4e2gCBLk)
+
+## Description
+
+This project is simply a Laser Tag game. Each gun uses Infra-red technology to communicate with each other. The features of this include:
+- 8 Different weapons to choose from
+- 2 Teams and a free for all
+- 100+ meters of range
+- Health mode selection
+- Haptic, visual and audio feedback
+
+Each gun has an IR led to send information and an array of IR receivers . Whenever a shot is fired, the IR led sends the current details of the gun (weapon used, team, etc) so that any other gun that is in a line of sight can take damage or ignore the signal (same team). This is achieved by using a bi-convex lens to focus light emitted from a IR led into a parallel beam (like a bullet).
+
+The frame is entirely 3D printed from PLA plastic and the total project cost was roughly $50.
+
+## Tech used
+- C++
+- Arduino
+- Microcontrollers
+- Electronics
+- IR
