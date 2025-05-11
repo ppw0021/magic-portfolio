@@ -39,14 +39,14 @@ const font = {
 
 const style = {
   theme: "dark", // theme is not necessary when using ThemeProvider (default)
-  neutral: "gray", // sand | gray | slate
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  neutral: "slate", // sand | gray | slate
+  brand: "moss", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "contrast", // color | contrast
-  solidStyle: "flat", // flat | plastic
+  solid: "color", // color | contrast
+  solidStyle: "plastic", // flat | plastic
   border: "playful", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
-  transition: "all", // all | micro | macro
+  transition: "micro", // all | micro | macro
   scaling: "100" // 90 | 95 | 100 | 105 | 110
 };
 
@@ -55,16 +55,16 @@ const effects = {
     cursor: false,
     x: 50,
     y: 0,
-    radius: 100,
+    radius: 200,
   },
   gradient: {
-    display: false,
-    opacity: 100,
+    display: true,
+    opacity: 80,
     x: 50,
-    y: 60,
+    y: 50,
     width: 100,
     height: 50,
-    tilt: 0,
+    tilt: 45,
     colorStart: "accent-background-strong",
     colorEnd: "page-background",
   },
@@ -76,10 +76,10 @@ const effects = {
   },
   grid: {
     display: false,
-    opacity: 100,
+    opacity: 10,
     color: "neutral-alpha-medium",
-    width: "0.25rem",
-    height: "0.25rem",
+    width: "1rem",
+    height: "1rem",
   },
   lines: {
     display: false,
@@ -94,7 +94,7 @@ const effects = {
 const display = {
   location: false,
   time: false,
-  themeSwitcher: true
+  themeSwitcher: false
 };
 
 const mailchimp = {
