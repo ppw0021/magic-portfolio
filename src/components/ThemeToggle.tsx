@@ -10,9 +10,9 @@ export const ThemeToggle: React.FC = () => {
     <>
       <ToggleButton
         prefixIcon={theme === 'dark' ? 'sun' : 'moon'}
-        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        onClick={() => setTheme(theme === 'dark' ? 'dark' : 'dark')}
         selected={false}
-        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        aria-label={`Switch to ${theme === 'dark' ? 'dark' : 'light'} mode`}
       />
     </>
   );

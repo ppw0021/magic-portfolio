@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = "light" | "dark" | "system";
+type Theme = "dark" | "dark" | "system";
 
 type ThemeProviderProps = {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ type ThemeProviderProps = {
 
 type ThemeProviderState = {
   theme: Theme;
-  resolvedTheme: 'light' | 'dark';
+  resolvedTheme: 'dark' | 'dark';
   setTheme: (theme: Theme) => void;
 };
 
@@ -25,7 +25,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 export function ThemeProvider({ children }: ThemeProviderProps) {
   // Start with system theme on server, will be updated on client
   const [theme, setTheme] = useState<Theme>("system");
-  const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('dark');
+  const [resolvedTheme, setResolvedTheme] = useState<'dark' | 'dark'>('dark');
   const [mounted, setMounted] = useState(false);
 
   // Initialize theme from localStorage on mount
@@ -44,10 +44,10 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     const root = document.documentElement;
     if (theme === 'system') {
       const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setResolvedTheme(isDark ? 'dark' : 'light');
-      root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      setResolvedTheme(isDark ? 'dark' : 'dark');
+      root.setAttribute('data-theme', isDark ? 'dark' : 'dark');
     } else {
-      setResolvedTheme(theme === 'dark' ? 'dark' : 'light');
+      setResolvedTheme(theme === 'dark' ? 'dark' : 'dark');
       root.setAttribute('data-theme', theme);
     }
   }, [theme, mounted]);
@@ -58,8 +58,8 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
 
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
-      setResolvedTheme(e.matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      setResolvedTheme(e.matches ? 'dark' : 'dark');
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'dark');
     };
 
     mediaQuery.addEventListener('change', handleChange);

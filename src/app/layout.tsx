@@ -56,7 +56,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
                   const root = document.documentElement;
                   if (theme === 'system') {
                     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+                    root.setAttribute('data-theme', isDark ? 'dark' : 'dark');
                   } else {
                     root.setAttribute('data-theme', theme);
                   }
