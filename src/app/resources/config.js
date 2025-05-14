@@ -36,17 +36,30 @@ const font = {
   tertiary: primaryFont,
   code: monoFont,
 };
-
+/*
 const style = {
   theme: "dark", // theme is not necessary when using ThemeProvider (default)
   neutral: "slate", // sand | gray | slate
   brand: "moss", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "color", // color | contrast
   solidStyle: "plastic", // flat | plastic
   border: "playful", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
   transition: "micro", // all | micro | macro
+  scaling: "100" // 90 | 95 | 100 | 105 | 110
+};*/
+
+const style = {
+  theme: "dark", // theme is not necessary when using ThemeProvider (default)
+  neutral: "gray", // sand | gray | slate
+  brand: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  solid: "contrast", // color | contrast
+  solidStyle: "flat", // flat | plastic
+  border: "playful", // rounded | playful | conservative
+  surface: "translucent", // filled | translucent
+  transition: "all", // all | micro | macro
   scaling: "100" // 90 | 95 | 100 | 105 | 110
 };
 
@@ -55,16 +68,16 @@ const effects = {
     cursor: false,
     x: 50,
     y: 0,
-    radius: 200,
+    radius: 100,
   },
   gradient: {
-    display: true,
-    opacity: 80,
+    display: false,
+    opacity: 100,
     x: 50,
-    y: 50,
+    y: 60,
     width: 100,
     height: 50,
-    tilt: 45,
+    tilt: 0,
     colorStart: "accent-background-strong",
     colorEnd: "page-background",
   },
@@ -76,10 +89,10 @@ const effects = {
   },
   grid: {
     display: false,
-    opacity: 10,
+    opacity: 100,
     color: "neutral-alpha-medium",
-    width: "1rem",
-    height: "1rem",
+    width: "0.25rem",
+    height: "0.25rem",
   },
   lines: {
     display: false,
@@ -118,7 +131,7 @@ const mailchimp = {
       colorEnd: "static-transparent",
     },
     dots: {
-      display: true,
+      display: false,
       opacity: 20,
       size: "2",
       color: "brand-on-background-weak",

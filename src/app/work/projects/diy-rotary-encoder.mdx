@@ -1,0 +1,26 @@
+---
+title: "DIY Rotary Encoder"
+publishedAt: "2024-03-18"
+summary: "3d Printable Accurate and Inexpensive Rotary Encoder"
+images:
+  - "/images/projects/diy-rotary-encoder/main.jpg"
+  - "/images/projects/diy-rotary-encoder/diagram.png"
+
+link: "https://github.com/ppw0021/arduino_rotary_encoder"
+---
+
+## Links
+[YouTube Demonstration](https://youtu.be/daqNxK5K_lY?si=LTv_Ti82yJfRsbe6)  
+[GitHub Repository](https://github.com/ppw0021/arduino_rotary_encoder)
+
+## Description
+This project is a DIY simple optical rotary encoder with 180 points per rotation and bi-directional detection that you can make at home with a 3D printer.  
+I got the idea to create my own Rotary Encoder because I needed one for my DIY Steering wheel project (in progress). The requirements were:
+- High accuracy
+- High resolution
+- High accuracy at high speeds
+- Inexpensive design
+
+A lot of rotary encoders on the market only have 20 points per rotation of detection, which for my application is simply not enough. At the upper end of the market for rotary encoders, (100+ points per rotation) the prices can quickly get steep ($50+). This was unacceptable so I decided to solve this problem by designing my own.
+
+The encoder works by detecting when the disk slots pass in front of the IR led emitter and IR led receiver. A second set of IR leds 1/2 of a notch out of phase checks if its either blocked or unblocked to detect orientation.

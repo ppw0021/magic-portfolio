@@ -1,0 +1,28 @@
+---
+title: "DIY Split Keyboard"
+publishedAt: "2024-03-18"
+summary: "Inexpensive Ergonomic DIY Split Keyboard"
+images:
+  - "/images/projects/diy-split-keyboard/main.jpg"
+  - "/images/projects/diy-split-keyboard/matrix.jpg"
+  - "/images/projects/diy-split-keyboard/left.jpg"
+  - "/images/projects/diy-split-keyboard/right.jpg"
+  - "/images/projects/diy-split-keyboard/proto.jpg"
+
+link: "https://github.com/ppw0021/key_pro"
+---
+
+## Links
+[YouTube Demonstration](https://www.youtube.com/watch?v=HJjdxOfm-nM)  
+[GitHub Repository](https://github.com/ppw0021/key_pro)
+
+## Description
+I created this highly ergonomic and efficient keyboard using 3 Arduinos. The Arduino Leonardo acts as a master to the Left and Right Keypads which each use a Arduino Pro Micro each.
+
+The Leonardo communicates using the I2C Protocol to communicate with the slave devices using polling.
+
+Each of the keypads also has more switches than inputs. I solved this problem by wiring the switches together as a matrix, connecting Pin 1 of each keyswitch for each row together, and Pin 2 of each keyswitch for each column together. This solution meant that by switching on each column and checking each input on the row, I am able to check the status of 30 switches using only 11 pins on the arduino.
+
+I am also using Visual Studio Code to program the arduino using C++ and the PlatformIO Library.
+
+The keyboard also has access to another set of inputs such as numbers and symbols by using an "alternative shift key" which dynamically switches the key from a letter to another character.
