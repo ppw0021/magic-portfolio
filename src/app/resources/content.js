@@ -9,8 +9,8 @@ const person = {
   role: "Final Year Software Engineering Student",
   avatar: "/images/avatar.jpg",
   email: "dec500star@gmail.com",
-  location: "Auckland, New Zealand", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: [], // optional: Leave the array empty if you don't want to display languages
+  location: "Pacific/Auckland",
+  languages: [],
 };
 
 const newsletter = {
@@ -18,15 +18,13 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about design, technology, and share thoughts on the
+      intersection of creativity and engineering.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
@@ -55,15 +53,11 @@ const home = {
   label: "Home",
   title: `DJRoss`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Welcome to my portfolio</>,
-  /*featured: {
-    display: false,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },*/
+  headline: <>Tēnā koe</>,
   subline: (
     <>
-      I'm Declan, a Final Year Software Engineering student at the Auckland University of Technology
+      I'm Declan, a Final Year Software Engineering student at the Auckland
+      University of Technology
     </>
   ),
 };
@@ -71,8 +65,7 @@ const home = {
 const about = {
   path: "/about",
   label: "About",
-  //title: `About – ${person.name}`,
-  title: 'About',
+  title: "About",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: false,
@@ -90,15 +83,17 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        I am a Software Engineering student in my final year of study at Auckland University of Technology. I'm very passionate about software and electronics and frequently complete my own projects.
+        I am a Software Engineering student in my final year of study at
+        Auckland University of Technology. I'm very passionate about software
+        and electronics and frequently complete my own projects.
         <br />
-        <br />
-        I have developed solutions to problems I have encountered and publicly made them available on GitHub.
+        <br />I have developed solutions to problems I have encountered and
+        publicly made them available on GitHub.
       </>
     ),
   },
   work: {
-    display: false,
+    display: true,
     title: "Work Experience",
     experiences: [
       {
@@ -106,35 +101,56 @@ const about = {
         timeframe: "2021-Present",
         role: "Sales Consultant",
         achievements: [
-          <>Consistently upheld a high standard of individualised customer service.</>,
+          <>
+            Consistently upheld a high standard of individualised customer
+            service.
+          </>,
         ],
         images: [],
-      }
+      },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Education",
     institutions: [
       {
         name: "Auckland University of Technology",
         description: (
           <>
-            Class of 2025 (Final Year)<br />
-            Bachelor of Engineering (Honours)<br />
-            Major: Software Engineering<br />
-            Minor: Digital Services<br />
+            Class of 2025 (Final Year)
             <br />
-            <strong>Relevant Coursework:</strong><br />
-            • Software Development Practice<br />
-            • Object Oriented Programming<br />
-            • Data Structures and Algorithms<br />
-            • Contemporary Issues in Software Engineering<br />
-            • Operating Systems<br />
-            • Database System Design<br />
-            • Software Architecture<br />
-            • Highly Secure Systems<br />
+            Bachelor of Engineering (Honours)
+            <br />
+            Major: Software Engineering
+            <br />
+            Minor: Digital Services
+            <br />
+            <br />
+            <strong>Relevant Coursework:</strong>
+            <br />
+            • Software Development Practice
+            <br />
+            • Object Oriented Programming
+            <br />
+            • Data Structures and Algorithms
+            <br />
+            • Contemporary Issues in Software Engineering
+            <br />
+            • Operating Systems
+            <br />
+            • Database System Design
+            <br />
+            • Software Architecture
+            <br />
+            • Highly Secure Systems
+            <br />
             • Human Computer Interaction
+            <br />
+            <br />
+            <strong>Leadership:</strong>
+            <br />
+            Executive Secretary – AUT Robotics Club (May 2025 – Present)
           </>
         ),
       },
@@ -142,44 +158,75 @@ const about = {
         name: "Howick College",
         description: (
           <>
-            Graduated 2020<br />
-            2020 University Entrance<br />
-            2019, 2018, 2017 Academic Merit Award – Digital Technology Electronics<br />
-            2018 ASB Brightsparks Competition – Finalist<br />
-            2018 Academic Award – Merit Endorsement Level 1
+            Graduated 2020
+            <br />
+            University Entrance – 2020
+            <br />
+            Academic Merit Award – Digital Technology Electronics (2019, 2018,
+            2017)
+            <br />
+            ASB Brightsparks Competition – Finalist (2018)
+            <br />
+            Academic Award – Merit Endorsement Level 1 (2018)
+            <br />
+            Top in Class – Digital Technology Electronics (2016)
           </>
         ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
         title: "",
         description: (
-          <>
-            • Git and GitHub<br />
-            • Python<br />
-            • C / C++<br />
-            • Java<br />
-            • C#<br />
-            • Unity<br />
-            • Microcontrollers<br />
-            • DevOps<br />
-            • Encryption<br />
-            • 3D Printing<br />
-            • Electronics<br />
-            • Z3<br />
-            • CAD Design<br />
-            • Mathematics<br />
-            • Cloud Computing
-          </>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "0.5rem",
+              width: "100%",
+            }}
+          >
+            <div>• C</div>
+            <div>• Mechatronics</div>
+            <div>• Git/GitHub</div>
+
+            <div>• GitHub Actions</div>
+            <div>• JavaScript</div>
+            <div>• C++</div>
+
+            <div>• Electronics</div>
+            <div>• Bash</div>
+            <div>• Backend/Frontend</div>
+
+            <div>• TypeScript</div>
+            <div>• C#</div>
+            <div>• 3D Printing/CAD</div>
+
+            <div>• Networking</div>
+            <div>• Server Hardware</div>
+            <div>• Node/Next/Express</div>
+            
+            <div>• Java</div>
+            <div>• Microcontrollers</div>
+            <div>• SQL/Databases</div>
+
+            <div>• Server Configuration</div>
+            <div>• HTML/CSS</div>
+            <div>• Python</div>
+
+            <div>• Unity</div>
+            <div>• Vercel</div>
+            <div>• VSCode</div>
+
+            <div>• Cloud Computing</div>
+          </div>
         ),
         images: [],
-        // optional: leave the array empty if you don't want to display images
-      }
+      },
     ],
   },
 };
@@ -189,8 +236,6 @@ const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work = {
@@ -198,17 +243,13 @@ const work = {
   label: "Projects",
   title: `Projects`,
   description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
 
 const gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery}`,
+  title: `Photo gallery`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",

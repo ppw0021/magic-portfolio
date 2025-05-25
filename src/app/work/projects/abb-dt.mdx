@@ -1,6 +1,6 @@
 ---
 title: "ABB IRB 2600 Digital Twin"
-publishedAt: "2023-03-18"
+publishedAt: "2025-05-26"
 summary: "3D Digital Twin of an ABB IRB 2600 Robot"
 images:
   - "/images/projects/abb-dt/main.png"
@@ -13,9 +13,16 @@ link: "https://github.com/ppw0021/abb-unity-digital-twin"
 [GitHub Repository](https://github.com/ppw0021/abb-unity-digital-twin)
 
 ## Description
+A digital twin is a digital copy of a robot usually rendered in a 3D engine such as the Unity Game engine. The digital twin is designed to replicate the motion of the robot in real time, and vise versa.
+
+This specific example uses Web Requests to talk to the ABB robot directly over a private LAN connection. Unity initially opens a connection through an HTTP client, and requests joint positions every 100ms, and smooths out the motion using custom written scripts. There are many adjustable parameters, and the code is highly optimised to allow for any robot to be quickly added with little modification.
 
 ## Technology used
-- 
+- ABB IRB 2600
+- ABB RobotWebServices API
+- C#
+- Unity
+- Web Requests and Networking
 
 ## Gallery
 Digital Twin in Unity.
